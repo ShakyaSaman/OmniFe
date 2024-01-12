@@ -34,7 +34,6 @@ const Card: React.FC<cardProps> = ({ cardIndex, cardObj, setCurrentCardIndex }) 
   }, [isClicked]);
 
   const handleDiscoverClick = (e) => {
-
     setCurrentCardIndex(cardIndex)
     let classes = ['bg-[#FFD540]', 'border-[#000000]', 'border-b-[5px]','border-r-[8px]','border-t-0']
     e.currentTarget.classList.add(...classes)

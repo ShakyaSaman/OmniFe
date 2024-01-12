@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Card from './components/card';
 import Product from './components/product';
+import Modal from './components/modal';
 
 interface cardObjType {
   title: string;
@@ -107,6 +108,7 @@ function App() {
         <Product currentCardData={data[currentCardIndex]} currentCardIndex={currentCardIndex}  />
       </div>
       
+      <Modal title={data[currentCardIndex].title} desc={data[currentCardIndex].cardDesc}/>
     </div>
   )
 }

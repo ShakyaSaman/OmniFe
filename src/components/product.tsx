@@ -33,6 +33,10 @@ const Product: React.FC<productProps> = (props) => {
     }))
   }
 
+  const showModal = () => {
+     document.querySelector('#modal')?.classList.remove('hidden')
+  }
+
   return (
     <>
       <div className="product-info w-[40%] flex flex-col justify-between mobile:w-[100%]">
@@ -42,7 +46,7 @@ const Product: React.FC<productProps> = (props) => {
         <div className="product-desc line-clamp-5 break-words text-[24px] leading-[32px] font-[400] mobile:text-[20px] mobile:leading-[28px] max-h-52 overflow-hidden ">
           {props.currentCardData.cardDesc}
         </div>
-        <button className='mobile:hidden self-start mt-24 text-[20px] leading-[24px] font-[600] bg-[#F15A29] text-[#000000] border-[#000000] border-[3px] rounded-[40px] pt-[10px] pr-[24px] pb-[10px] pl-[24px]'>
+        <button className='mobile:hidden self-start mt-24 text-[20px] leading-[24px] font-[600] bg-[#F15A29] text-[#000000] border-[#000000] border-[3px] rounded-[40px] pt-[10px] pr-[24px] pb-[10px] pl-[24px]' onClick={showModal} >
           Discover product
         </button>
       </div>
@@ -67,7 +71,7 @@ const Product: React.FC<productProps> = (props) => {
         )}
       </div>
 
-      <button className='hidden mobile:block self-start mt-24 text-[20px] leading-[24px] font-[600] bg-[#F15A29] text-[#000000] border-[#000000] border-[3px] rounded-[40px] pt-[10px] pr-[18px] pb-[10px] pl-[18px]'>
+      <button className='hidden mobile:block self-start mt-24 text-[20px] leading-[24px] font-[600] bg-[#F15A29] text-[#000000] border-[#000000] border-[3px] rounded-[40px] pt-[10px] pr-[18px] pb-[10px] pl-[18px]' onClick={showModal} >
           Discover product
         </button>
     </>
