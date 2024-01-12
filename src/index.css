@@ -1,0 +1,27 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+body{
+    background-color: #F7F7F7;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+::-webkit-scrollbar {
+    display: none !important;
+}
+
+.accordian-content{
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.accordian-content.show{
+    height: auto;
+    max-height: 999px;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
